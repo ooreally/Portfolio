@@ -84,6 +84,11 @@ hr {
     font-size: 30px;
 }
 
+.navigation .nav-brand .small{
+    color: rgb(21, 20, 37);
+    font-size: 1rem;
+}
+
 .navigation .nav-pills {
     text-align: right;
 }
