@@ -2,13 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@500&family=Noto+Sans+JP:wght@500&display=swap');
 :root {
     --primary-color: #686bf1;
-    --off-white: #F3F4F6;
+    --off-white: #eaebee;
     --dark-gray: #6B7280;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
-    margin: 0px
+    margin: 0px; 
+    height:100vh;
+    width:100%;
+    display: flex;
+    flex-direction: column;
 }
 
 hr {
@@ -31,6 +35,11 @@ hr {
     margin: auto;
 }
 
+/* .container-side {
+    
+    margin: auto;
+    display: inline-block;
+} */
 /** links **/
 .link {
     box-sizing: border-box;
@@ -75,15 +84,15 @@ hr {
 .navigation {
     background-color: var(--primary-color);
     color: white;
-    padding: 1rem;
+    padding: 1rem 1rem 0.1rem;
     border-bottom-left-radius: 1rem;
 }
 
 .navigation .nav-brand {
     font-weight: bold;
     font-size: 30px;
+    padding-bottom: 0rem;
 }
-
 .navigation .nav-brand .small{
     color: rgb(21, 20, 37);
     font-size: 1rem;
@@ -91,6 +100,7 @@ hr {
 
 .navigation .nav-pills {
     text-align: right;
+    /* float: right; */
 }
 
 .navigation .link {
@@ -104,13 +114,15 @@ hr {
 /** header **/
 
 .hero {
-    padding: 2rem;
-    padding-top: 5rem;
+    padding: 1rem;
+    padding-top: 4rem;
+    
 
 }
 
 .hero .hero-img {
     max-width: 80%;
+    
     width: 350px;
     display: block;
     margin: auto;
@@ -144,11 +156,14 @@ hr {
 /** footers **/
 
 .footer {
+
     background-color: var(--primary-color);
-    padding: 3rem 1rem ;
+    padding: 1rem 1rem ;
     text-align: center;
+    margin-top:auto;
     color: white;
     border-top-right-radius: 1rem;
+    
 }
 
 .footer .link {
@@ -174,12 +189,56 @@ hr {
     padding-bottom: 6rem;
 }
 
-.list-item-inline .link .social {
-    padding : 0.35rem 0.35rem
+.social {
+    padding : 0.35rem 0.35rem;
+    color: black;
     
 }
+@media only screen and (max-width:600px) {
+     
+    .navigation .list-item-inline {
+        padding: 0px 2px;
+        text-align: center;
+    }
+    .navigation .nav-pills .link{
+        
+        padding: 0rem;
+    }
+     
+    .navigation .nav-pills{
+        display: grid;
+        grid-auto-columns: auto;
+        grid-auto-flow: column;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        /* align-items:center; */
+    }
+    .navigation .nav-brand {
+        padding-bottom: 0.5rem;
+    }
 
-.list-item-inline .last {
-    color: black
+    .footer{
+        padding: 1rem 0rem;
+        
+    }
+
+    .footer .list-item-inline{
+        padding: 0rem;
+    }
+    .footer .social-links {
+        display: grid;
+        grid-auto-columns: auto;
+        grid-auto-flow: column;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        align-items: center;
+        /* padding: 0px; */
+    }
+
 }
+
+
+/* .list-item-inline .last {
+    
+} */
 
